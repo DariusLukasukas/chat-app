@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+@font-face {
+  font-family: "Architype Stedelijk W00";
+  src: url("/fonts/Architype Stedelijk W00.woff") format("woff");
+}
+@font-face {
+  font-family: "Manrope-Regular";
+  src: url("/fonts/Manrope-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "OffBit-Bold";
+  src: url("/fonts/OffBit-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "OffBit-Dot";
+  src: url("/fonts/OffBit-Dot.woff") format("woff");
+}
+@font-face {
+  font-family: "OffBit-Regular";
+  src: url("/fonts/OffBit-Regular.woff") format("woff");
+}
+
+@keyframes flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-flow {
+  animation-name: flow;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  background-size: 400% 400%;
+}
