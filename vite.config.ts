@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: "/chat-app/",
   build: {
-    chunkSizeWarningLimit: 650,
+    chunkSizeWarningLimit: 900,
   },
 });

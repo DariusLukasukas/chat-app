@@ -34,7 +34,7 @@ function ChatMessage(props: any) {
         ))}
       <div>
         <div
-          className={`text-sm font-light ${
+          className={`text-sm font-light text-neutral-500 ${
             isSentMessage ? "text-right" : "text-left"
           } ${shouldShowProfileImage ? "" : "hidden"}`}
         >
@@ -45,7 +45,9 @@ function ChatMessage(props: any) {
             isSentMessage
               ? "w-fit rounded-2xl bg-blue-400"
               : "w-fit rounded-2xl bg-neutral-500"
-          }${shouldShowProfileImage ? "" : " mx-10"} max-w-xs break-words p-2`}
+          }${
+            shouldShowProfileImage ? "" : " mx-10"
+          } max-w-xs break-words p-2 text-sm`}
         >
           {text}
         </p>

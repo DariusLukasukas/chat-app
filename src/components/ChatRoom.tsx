@@ -74,12 +74,13 @@ function ChatRoom() {
 
   return (
     <>
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-4 md:px-16">
         <div className="flex h-screen flex-col gap-2">
-          <NavBar />
-
-          <main className="scrollbar-track-transperent min-h-[25vh] overflow-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-neutral-700 scrollbar-thumb-rounded-lg scrollbar-h-14">
-            <div className="mr-2 flex flex-col gap-y-2 py-2">
+          <div>
+            <NavBar />
+          </div>
+          <main className="scrollbar-track-transperent flex-1 overflow-hidden scrollbar-thin scrollbar-thumb-neutral-700 scrollbar-thumb-rounded-lg scrollbar-h-14">
+            <div className="mr-2 flex flex-col gap-y-2 py-2 px-1">
               {messages &&
                 messages.map((msg, i) => (
                   <ChatMessage
@@ -92,25 +93,28 @@ function ChatRoom() {
             <div ref={dummy}></div>
           </main>
 
-          <form
-            onSubmit={sendMessage}
-            className="sticky flex w-full flex-row justify-between rounded-2xl bg-white"
-          >
-            <input
-              value={formValue}
-              onChange={(e) => setFormValue(e.target.value)}
-              placeholder="say something nice"
-              className="max-h-48 w-full resize-none overflow-y-auto rounded-l-2xl py-2 px-3 text-black outline-none"
-            />
+          <div className="bottom-0">
+            <form
+              onSubmit={sendMessage}
+              className="flex items-center rounded-2xl bg-white"
+            >
+              <input
+                value={formValue}
+                onChange={(e) => setFormValue(e.target.value)}
+                placeholder="say something nice"
+                className="max-h-48 w-full resize-none overflow-y-auto rounded-l-2xl py-2 px-3 text-sm text-black outline-none"
+              />
 
-            <button type="submit" disabled={!formValue} className="p-4">
-              <FiSend className="h-5 w-5 text-black" />
-            </button>
-          </form>
-          <div className="flex w-full select-none justify-center pb-2 text-xs text-neutral-500">
-            Please note that all messages sent in the ChatApp global chatroom
-            are public and visible to all users. We encourage you to be
-            respectful and mindful of others when using ChatApp.
+              <button type="submit" disabled={!formValue} className="p-4">
+                <FiSend className="h-5 w-5 text-black" />
+              </button>
+            </form>
+
+            <div className="flex w-full select-none justify-center pb-2 text-xs text-neutral-500">
+              Please note that all messages sent in the ChatHub chatroom are
+              public and visible to all users. We encourage you to be respectful
+              and mindful of others when using ChatHub.
+            </div>
           </div>
         </div>
       </div>
