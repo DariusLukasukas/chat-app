@@ -43,6 +43,8 @@ function Hero() {
           <div className="grid w-full grid-cols-1 justify-items-center">
             <img
               src={Phonemockup}
+              loading="lazy"
+              alt="Phone Mockup"
               className="z-10 ml-10 h-fit w-full max-w-xs"
             />
             <div className="absolute ml-[10rem] mt-[12rem] h-96 w-96 animate-blob rounded-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-70 blur-3xl filter transition lg:w-[30rem]"></div>

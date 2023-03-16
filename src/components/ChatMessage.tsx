@@ -24,6 +24,7 @@ function ChatMessage(props: any) {
           <img
             src={photoURL}
             alt="profile"
+            loading="lazy"
             className="h-9 w-9 self-end rounded-full"
           />
         ) : (

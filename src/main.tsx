@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App";
 import ChatRoom from "./components/ChatRoom";
 import "./index.css";
 
 //  Page Routes
-import LoginPage from "./routes/LoginPagePage";
-import LoginEmail from "./routes/LoginEmailPage";
-import SignUpPage from "./routes/SignUpPage";
-import SignUpEmail from "./routes/SignUpEmailPage";
+const App = React.lazy(() => import("./routes/HomePage"));
+const LoginPage = React.lazy(() => import("./routes/LoginPagePage"));
+const LoginEmail = React.lazy(() => import("./routes/LoginEmailPage"));
+const SignUpPage = React.lazy(() => import("./routes/SignUpPage"));
+const SignUpEmail = React.lazy(() => import("./routes/SignUpEmailPage"));
 
 const router = createBrowserRouter(
   [
