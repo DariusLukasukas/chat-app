@@ -38,7 +38,7 @@ function ChatMessage(props: any) {
             isSentMessage ? "text-right" : "text-left"
           } ${shouldShowProfileImage ? "" : "hidden"}`}
         >
-          {userName ? userName : "Guest"}
+          {userName ? userName.split(" ")[0] : "Guest"}
         </div>
         <p
           className={`message ${
