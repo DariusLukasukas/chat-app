@@ -1,6 +1,6 @@
 # React Firebase Chat App 
 
-This is a siple React and Firebase Chat App that allows users to chat with each other in real-time. It uses Firebase Authentication for user authentication and Firebase Realtime Database for storing and retrieving messages.
+This is a simple React and Firebase Chat App that allows users to chat with each other in real-time. It uses Firebase Authentication for user authentication and Firebase Realtime Database for storing and retrieving messages.
 
 <img width="1567" alt="Screenshot 2023-03-16 at 20 59 44" src="https://user-images.githubusercontent.com/64962012/225726197-7564dafa-d6fa-4d1e-b361-14714b8d5334.png">
 
