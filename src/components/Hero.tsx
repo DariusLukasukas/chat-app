@@ -47,7 +47,7 @@ function Hero() {
             <img
               src={Phonemockup}
               alt="Phone Mockup"
-              className=" z-10 ml-10 h-fit w-full max-w-xs"
+              className="z-10 ml-10 h-fit w-full max-w-xs"
             />
             <div className="absolute ml-[10rem] mt-[12rem] h-96 w-96 animate-blob rounded-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-70 blur-3xl filter transition lg:w-[30rem]"></div>
             <div className="-delay-4000 absolute mr-[10rem] mt-[2rem] h-96 w-72 animate-blob rounded-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-70 blur-3xl filter transition lg:mt-0"></div>

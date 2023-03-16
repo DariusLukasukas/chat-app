@@ -74,46 +74,48 @@ function ChatRoom() {
 
   return (
     <>
-      <div className="container mx-auto px-4 md:px-16">
-        <div className="flex h-screen flex-col gap-2">
-          <div>
-            <NavBar />
-          </div>
-          <main className="scrollbar-track-transperent flex-1 overflow-hidden scrollbar-thin scrollbar-thumb-neutral-700 scrollbar-thumb-rounded-lg scrollbar-h-14">
-            <div className="mr-2 flex flex-col gap-y-2 py-2 px-1">
-              {messages &&
-                messages.map((msg, i) => (
-                  <ChatMessage
-                    key={i}
-                    message={msg}
-                    previousMessage={i > 0 ? messages[i - 1] : null}
-                  />
-                ))}
+      <div className="absolute inset-0">
+        <div className="container mx-auto px-4 md:px-16">
+          <div className="flex h-screen flex-col gap-2">
+            <div className="top-0">
+              <NavBar />
             </div>
-            <div ref={dummy}></div>
-          </main>
+            <main className="scrollbar-track-transperent flex-1 overflow-hidden scrollbar-thin scrollbar-thumb-neutral-700 scrollbar-thumb-rounded-lg scrollbar-h-14">
+              <div className="mr-2 flex flex-col gap-y-2 py-2 px-1">
+                {messages &&
+                  messages.map((msg, i) => (
+                    <ChatMessage
+                      key={i}
+                      message={msg}
+                      previousMessage={i > 0 ? messages[i - 1] : null}
+                    />
+                  ))}
+              </div>
+              <div ref={dummy}></div>
+            </main>
 
-          <div className="bottom-0">
-            <form
-              onSubmit={sendMessage}
-              className="flex items-center rounded-2xl bg-white"
-            >
-              <input
-                value={formValue}
-                onChange={(e) => setFormValue(e.target.value)}
-                placeholder="say something nice"
-                className="max-h-48 w-full resize-none overflow-y-auto rounded-l-2xl py-2 px-3 text-sm text-black outline-none"
-              />
+            <div className="bottom-0">
+              <form
+                onSubmit={sendMessage}
+                className="flex items-center rounded-2xl bg-white"
+              >
+                <input
+                  value={formValue}
+                  onChange={(e) => setFormValue(e.target.value)}
+                  placeholder="say something nice"
+                  className="max-h-48 w-full resize-none overflow-y-auto rounded-l-2xl py-2 px-3 text-sm text-black outline-none"
+                />
 
-              <button type="submit" disabled={!formValue} className="p-4">
-                <FiSend className="h-5 w-5 text-black" />
-              </button>
-            </form>
+                <button type="submit" disabled={!formValue} className="p-4">
+                  <FiSend className="h-5 w-5 text-black" />
+                </button>
+              </form>
 
-            <div className="flex w-full select-none justify-center pb-2 text-xs text-neutral-500">
-              Please note that all messages sent in the ChatHub chatroom are
-              public and visible to all users. We encourage you to be respectful
-              and mindful of others when using ChatHub.
+              <div className="flex w-full select-none justify-center pb-2 text-xs text-neutral-500">
+                Please note that all messages sent in the ChatHub chatroom are
+                public and visible to all users. We encourage you to be
+                respectful and mindful of others when using ChatHub.
+              </div>
             </div>
           </div>
         </div>
